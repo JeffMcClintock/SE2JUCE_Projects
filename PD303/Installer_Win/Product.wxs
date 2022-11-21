@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<!--
+	TODO: Update ProductName, update ManufacturerName, change GUID (registry format minus squigglies)
+	-->
+  <?define ProductName = "BasSeq" ?>
+  <?define ManufacturerName = "Exonic UK" ?>
+  <?define ProductFileName = "$(var.ProductName)" ?>
+  <?define PlatformSrcFolder = "..\Builds\VisualStudio2022\x64\Release" ?>
+
+  <Product Id="*" Name="AI Master" Language="1033" Version="1.0.0.0" Manufacturer="$(var.ManufacturerName)" UpgradeCode="32D6917C-6C93-41CD-B6A6-7217DB7B2A2B">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate />
+
+		<Feature Id="ProductFeature" Title="AiInstaller" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="CommonFiles64Folder">
+         <Directory Id="INSTALLFOLDER" Name="VST3" />
+      </Directory>
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      <Component Id="ProductComponent" Win64="yes">
+        <File Id="VST3_Plugin" Name="$(var.ProductName).vst3" KeyPath="yes" DiskId="1" Source="$(var.PlatformSrcFolder)\VST3\$(var.ProductFileName).vst3" />
+      </Component>
+    </ComponentGroup>
+	</Fragment>
+</Wix>
