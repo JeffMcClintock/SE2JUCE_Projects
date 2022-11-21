@@ -1,3 +1,4 @@
+Copy entire PD303 folder, name it to your plugin name
 Edit CmakeLists.txt
 
 project(PD303 VERSION 0.0.1)
