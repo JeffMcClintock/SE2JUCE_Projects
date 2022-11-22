@@ -8,6 +8,6 @@ change manufacture code from Xxxx (keeping same format)
 change PLUGIN_CODE from Yyyy (keeping same 4 digit format)
 change PRODUCT_NAME
 
-in VS Configuration Manager, untick lv2 helper inder Degub and Release
+in VS Configuration Manager, untick lv2 helper under Debug and Release
 
 JUCE_APP_VERSION
