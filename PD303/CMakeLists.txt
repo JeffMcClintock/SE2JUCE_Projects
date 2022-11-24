@@ -81,9 +81,8 @@ target_sources(AudioPluginExample
         ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/se_sdk3_hosting/SE2JUCE_Processor.cpp
         ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/se_sdk3_hosting/SE2JUCE_Controller.cpp
 ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/se_sdk3_hosting/SE2JUCE_BinaryDataAccess.cpp
-        # modules that this project needs
-        # ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/ControlsXp/SliderGui.h
-        # ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/ControlsXp/SliderGui.cpp
+        # additional modules that this project needs
+        ${CMAKE_CURRENT_SOURCE_DIR}/../modules_3rdparty/ADSR4/Adsr4.cpp
 )
 
 # `target_compile_definitions` adds some preprocessor definitions to our target. In a Projucer
@@ -116,26 +115,7 @@ target_compile_definitions(AudioPluginExample
 # static library. These source files can be of any kind (wav data, images, fonts, icons etc.).
 # Conversion to binary-data will happen when your target is built.
 
-juce_add_binary_data(AudioPluginData SOURCES 
-Resources/dsp.se.xml
-Resources/factory.se.xml
-Resources/gui.se.json
-Resources/parameters.se.xml
-Resources/database.se.xml
-Resources/default2__global.txt
-Resources/default__button_sm.png
-Resources/default__button_sm.txt
-Resources/default__knob_sm.png
-Resources/default__knob_sm.txt
-Resources/default__led.png
-Resources/default__led.txt
-Resources/PD303__background.png
-Resources/PD303__button_sm.png
-Resources/PD303__button_sm.txt
-Resources/PD303__global.txt
-Resources/PD303__knob_med.png
-Resources/PD303__knob_med.txt
-Resources/PD303____fontMetrics.txt)
+include(${CMAKE_CURRENT_SOURCE_DIR}/Resources/cmake_resources.txt)
 
 # `target_link_libraries` links libraries and JUCE modules to other libraries or executables. Here,
 # we're linking our executable target to the `juce::juce_audio_utils` module. Inter-module
