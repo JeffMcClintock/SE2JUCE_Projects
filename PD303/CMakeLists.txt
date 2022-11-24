@@ -80,8 +80,9 @@ target_sources(AudioPluginExample
         ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/se_sdk3_hosting/SE2JUCE_Editor.cpp
         ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/se_sdk3_hosting/SE2JUCE_Processor.cpp
         ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/se_sdk3_hosting/SE2JUCE_Controller.cpp
-${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/se_sdk3_hosting/SE2JUCE_BinaryDataAccess.cpp
+        Source/ExtraModules.cpp
         # additional modules that this project needs
+        # please also add in entry for each module in ExtraModules.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/../modules_3rdparty/ADSR4/Adsr4.cpp
 )
 
