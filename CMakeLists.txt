@@ -9,6 +9,7 @@ set(SE_LOCAL_BUILD FALSE CACHE BOOL "Execute extra build steps for developers ma
 
 set(VST3_SDK ${JUCE_FOLDER}/modules/juce_audio_processors/format_types/VST3_SDK)
 set(se_sdk_folder ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/se_sdk3)
+set(GMPI_SDK ${SE2JUCE_FOLDER}/GMPI_SDK/Core)
 set(SE2JUCE 1)
 
 # This is for macOS commandline only, because it uses a single-target generator. for other targets, ref: target_compile_definitions
