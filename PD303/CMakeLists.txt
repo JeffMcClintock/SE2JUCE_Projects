@@ -16,6 +16,8 @@ cmake_minimum_required(VERSION 3.15)
 
 project(PD303 VERSION 0.0.1)
 
+set( TARGET_NAME ${PROJECT_NAME} )
+
 # If you've installed JUCE somehow (via a package manager, or directly using the CMake install
 # target), you'll need to tell this project that it depends on the installed copy of JUCE. If you've
 # included JUCE directly in your source tree (perhaps as a submodule), you'll need to tell CMake to
@@ -29,7 +31,7 @@ add_subdirectory(${JUCE_FOLDER} JUCE)                    # If you've put JUCE in
 # system. This setup should be done before calling `juce_add_plugin`.
 
 # juce_set_vst2_sdk_path(...)
-# juce_set_aax_sdk_path(...)
+juce_set_aax_sdk_path(${AAX_FOLDER})
 
 # `juce_add_plugin` adds a static library target with the name passed as the first argument
 # (AudioPluginExample here). This target is a normal CMake target, but has a lot of extra properties set
@@ -37,7 +39,13 @@ add_subdirectory(${JUCE_FOLDER} JUCE)                    # If you've put JUCE in
 # the formats specified by the FORMATS arguments. This function accepts many optional arguments.
 # Check the readme at `docs/CMake API.md` in the JUCE repo for the full list.
 
-juce_add_plugin(AudioPluginExample
+if(APPLE)
+set( PLUGIN_FORMATS AU VST3 Standalone AAX )
+else()
+set( PLUGIN_FORMATS AU VST3 Standalone )
+endif()
+
+juce_add_plugin(${TARGET_NAME}
     # VERSION ...                               # Set this if the plugin version is different to the project version
     # ICON_BIG ...                              # ICON_* arguments specify a path to an image file to use as an icon for the Standalone
     # ICON_SMALL ...
@@ -51,8 +59,8 @@ juce_add_plugin(AudioPluginExample
     PLUGIN_MANUFACTURER_CODE Xxxx               # A four-character manufacturer id with at least one upper-case character
     PLUGIN_CODE Yyyy                            # A unique four-character plugin id with exactly one upper-case character
                                                 # GarageBand 10.3 requires the first letter to be upper-case, and the remaining letters to be lower-case
-    FORMATS AU VST3 Standalone                  # The formats to build. Other valid formats are: AAX Unity VST AU AUv3
-    PRODUCT_NAME "YourPluginNameHere")        # The name of the final executable, which can differ from the target name
+    FORMATS ${PLUGIN_FORMATS}                   # The formats to build. Other valid formats are: AAX Unity VST AU AUv3
+    PRODUCT_NAME "${PROJECT_NAME}")             # The name of the final executable, which can differ from the target name
 
 # `juce_generate_juce_header` will create a JuceHeader.h for a given target, which will be generated
 # into your build tree. This should be included with `#include <JuceHeader.h>`. The include path for
@@ -60,7 +68,7 @@ juce_add_plugin(AudioPluginExample
 # include all your JUCE module headers; if you're happy to include module headers directly, you
 # probably don't need to call this.
 
-juce_generate_juce_header(AudioPluginExample)
+juce_generate_juce_header(${TARGET_NAME})
 
 #Jeff
 include_directories(
@@ -75,7 +83,7 @@ include_directories(
 # Finally, we supply a list of source files that will be built into the target. This is a standard
 # CMake command.
 
-target_sources(AudioPluginExample
+target_sources(${TARGET_NAME}
     PRIVATE
         ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/se_sdk3_hosting/SE2JUCE_Editor.cpp
         ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/se_sdk3_hosting/SE2JUCE_Processor.cpp
@@ -93,15 +101,16 @@ target_sources(AudioPluginExample
 # definitions will be visible both to your code, and also the JUCE module code, so for new
 # definitions, pick unique names that are unlikely to collide! This is a standard CMake command.
 
-target_compile_definitions(AudioPluginExample
+target_compile_definitions(${TARGET_NAME}
     PUBLIC
+        DONT_SET_USING_JUCE_NAMESPACE=1
         # JUCE_WEB_BROWSER and JUCE_USE_CURL would be on by default, but you might not need them.
         JUCE_WEB_BROWSER=0  # If you remove this, add `NEEDS_WEB_BROWSER TRUE` to the `juce_add_plugin` call
         JUCE_USE_CURL=0     # If you remove this, add `NEEDS_CURL TRUE` to the `juce_add_plugin` call
         JUCE_VST3_CAN_REPLACE_VST2=0)
 
 #Jeff
-target_compile_definitions(AudioPluginExample
+target_compile_definitions(${TARGET_NAME}
     PUBLIC
         SE_TARGET_PLUGIN
 )
@@ -124,7 +133,7 @@ include(${CMAKE_CURRENT_SOURCE_DIR}/Resources/cmake_resources.txt)
 # linked automatically. If we'd generated a binary data target above, we would need to link to it
 # here too. This is a standard CMake command.
 
-target_link_libraries(AudioPluginExample
+target_link_libraries(${TARGET_NAME}
     PRIVATE
         AudioPluginData           # If we'd created a binary data target, we'd link to it here
         juce::juce_audio_utils
