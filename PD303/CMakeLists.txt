@@ -31,7 +31,9 @@ add_subdirectory(${JUCE_FOLDER} JUCE)                    # If you've put JUCE in
 # system. This setup should be done before calling `juce_add_plugin`.
 
 # juce_set_vst2_sdk_path(...)
+if(APPLE AND NOT ${AAX_FOLDER} STREQUAL "")
 juce_set_aax_sdk_path(${AAX_FOLDER})
+endif()
 
 # `juce_add_plugin` adds a static library target with the name passed as the first argument
 # (AudioPluginExample here). This target is a normal CMake target, but has a lot of extra properties set
@@ -40,7 +42,12 @@ juce_set_aax_sdk_path(${AAX_FOLDER})
 # Check the readme at `docs/CMake API.md` in the JUCE repo for the full list.
 
 if(APPLE)
-set( PLUGIN_FORMATS AU VST3 Standalone AAX )
+set( PLUGIN_FORMATS AU VST3 Standalone )
+
+if(NOT ${AAX_FOLDER} STREQUAL "")
+set( PLUGIN_FORMATS ${PLUGIN_FORMATS} AAX )
+endif()
+
 else()
 set( PLUGIN_FORMATS AU VST3 Standalone )
 endif()
@@ -89,8 +96,8 @@ target_sources(${TARGET_NAME}
         ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/se_sdk3_hosting/SE2JUCE_Processor.cpp
         ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/se_sdk3_hosting/SE2JUCE_Controller.cpp
         Source/ExtraModules.cpp
-        # additional modules that this project needs
-        # please also add in entry for each module in ExtraModules.cpp
+        # EXTRA-MODULES?
+        # please also add in entry for each module in Source/ExtraModules.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/../modules_3rdparty/ADSR4/Adsr4.cpp
 )
 
@@ -115,7 +122,7 @@ target_compile_definitions(${TARGET_NAME}
         SE_TARGET_PLUGIN
 )
 
-#JEff hmm, needs to be per-plugin, not in lib        SE_EXTRA_STATIC_FILE_CPP="../Resources/module_static_link.cpp"
+#Jeff hmm, needs to be per-plugin, not in lib        SE_EXTRA_STATIC_FILE_CPP="../Resources/module_static_link.cpp"
 # maybe put in controller or sommit?
 
 # If your target needs extra binary assets, you can add them here. The first argument is the name of

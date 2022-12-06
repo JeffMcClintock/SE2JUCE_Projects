@@ -4,10 +4,6 @@
 
 #define INIT_STATIC_FILE(filename) void se_static_library_init_##filename(); se_static_library_init_##filename();
 
-/*
-Please add a reference below to any additional modules that you need.
-and also do so in CmakeLists.txt just below "Source/ExtraModules.cpp"
-*/
 
 extern void initialise_synthedit_extra_modules([[maybe_unused]]bool passFalse)
 {
@@ -18,6 +14,14 @@ extern void initialise_synthedit_extra_modules([[maybe_unused]]bool passFalse)
         return;
 #endif
 
+/*
+* EXTRA-MODULES?
+Please add a reference below to any additional modules that you need.
+and also do so in CmakeLists.txt just below "Source/ExtraModules.cpp"
+NOTE:
+A) you need one entry here for each .cpp file of your module.
+B) each .cpp file needs to contain a matching macro. e.g. SE_DECLARE_INIT_STATIC_FILE(ADSR4);
+*/
     INIT_STATIC_FILE(ADSR4);
 }
 
