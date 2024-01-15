@@ -132,7 +132,7 @@ target_compile_definitions(${TARGET_NAME}
 # static library. These source files can be of any kind (wav data, images, fonts, icons etc.).
 # Conversion to binary-data will happen when your target is built.
 
-include(${CMAKE_CURRENT_SOURCE_DIR}/Resources/cmake_resources.txt)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/Resources)
 
 # `target_link_libraries` links libraries and JUCE modules to other libraries or executables. Here,
 # we're linking our executable target to the `juce::juce_audio_utils` module. Inter-module
@@ -142,7 +142,7 @@ include(${CMAKE_CURRENT_SOURCE_DIR}/Resources/cmake_resources.txt)
 
 target_link_libraries(${TARGET_NAME}
     PRIVATE
-        AudioPluginData           # If we'd created a binary data target, we'd link to it here
+        BinaryData           # If we'd created a binary data target, we'd link to it here
         juce::juce_audio_utils
         SynthEditLib
     PUBLIC
