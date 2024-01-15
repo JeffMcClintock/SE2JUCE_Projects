@@ -6,7 +6,7 @@ set(CMAKE_OSX_ARCHITECTURES "x86_64;arm64" CACHE STRING "Build architectures for
 set(SE2JUCE_FOLDER "SE2JUCE_FOLDER_HERE" CACHE PATH "Where is SE2JUCE installed on this system")
 set(JUCE_FOLDER "JUCE_FOLDER_HERE" CACHE PATH "Where is JUCE installed on this system")
 set(AAX_FOLDER "" CACHE PATH "Where is AAX SDK installed on this system")
-set(SE_LOCAL_BUILD FALSE CACHE BOOL "Execute extra build steps for developers machine")
+#set(SE_LOCAL_BUILD FALSE CACHE BOOL "Execute extra build steps for developers machine")
 
 set(VST3_SDK ${JUCE_FOLDER}/modules/juce_audio_processors/format_types/VST3_SDK)
 set(se_sdk_folder ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/se_sdk3)
