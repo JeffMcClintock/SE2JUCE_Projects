@@ -92,13 +92,20 @@ include_directories(
 
 target_sources(${TARGET_NAME}
     PRIVATE
+        Source/ProcessorFactory.cpp
+        Source/ExtraModules.cpp
         ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/se_sdk3_hosting/SE2JUCE_Editor.cpp
         ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/se_sdk3_hosting/SE2JUCE_Processor.cpp
         ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/se_sdk3_hosting/SE2JUCE_Controller.cpp
-        Source/ExtraModules.cpp
         # EXTRA-MODULES?
         # please also add in entry for each module in Source/ExtraModules.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/../modules_3rdparty/ADSR4/Adsr4.cpp
+)
+
+target_include_directories(
+    ${TARGET_NAME}
+        PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/Source
 )
 
 # `target_compile_definitions` adds some preprocessor definitions to our target. In a Projucer
