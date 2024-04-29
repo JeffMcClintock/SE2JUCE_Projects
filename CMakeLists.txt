@@ -36,6 +36,10 @@ if (MSVC)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /fp:fast /GS-")
 endif()
 
+if(APPLE)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -ffast-math")
+endif()
+
 # include the SynthEdit library
 add_subdirectory(${SE2JUCE_FOLDER}/SE_DSP_CORE SE_DSP_CORE)
 
