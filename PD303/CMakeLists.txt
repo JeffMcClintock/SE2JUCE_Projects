@@ -78,25 +78,40 @@ juce_add_plugin(${TARGET_NAME}
 juce_generate_juce_header(${TARGET_NAME})
 
 #Jeff
+set( SE_HOSTING_FOLDER ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/se_sdk3_hosting )
 include_directories(
     ${SE2JUCE_FOLDER}/SE_DSP_CORE
     ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/shared    
     ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/se_sdk3
     ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/se_sdk3_hosting
+    ${GMPI_SDK}/Core
     )
 
 # `target_sources` adds source files to a target. We pass the target that needs the sources as the
 # first argument, then a visibility parameter for the sources which should normally be PRIVATE.
 # Finally, we supply a list of source files that will be built into the target. This is a standard
 # CMake command.
+set(se2juce_srcs
+    ${SE_HOSTING_FOLDER}/SE2JUCE_Editor.h
+    ${SE_HOSTING_FOLDER}/SE2JUCE_Editor.cpp
+    ${SE_HOSTING_FOLDER}/SE2JUCE_Processor.h
+    ${SE_HOSTING_FOLDER}/SE2JUCE_Processor.cpp
+    ${SE_HOSTING_FOLDER}/SE2JUCE_Controller.h
+    ${SE_HOSTING_FOLDER}/SE2JUCE_Controller.cpp
+    ${SE_HOSTING_FOLDER}/SE2JUCE_ParameterAttachment.h
+    ${SE_HOSTING_FOLDER}/ProcessorStateManager.h
+    ${SE_HOSTING_FOLDER}/ProcessorStateManager.cpp
+    ${SE_HOSTING_FOLDER}/SubPresetManager.h
+    ${SE_HOSTING_FOLDER}/SubPresetManager.cpp
+)
 
 target_sources(${TARGET_NAME}
     PRIVATE
         Source/ProcessorFactory.cpp
         Source/ExtraModules.cpp
-        ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/se_sdk3_hosting/SE2JUCE_Editor.cpp
-        ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/se_sdk3_hosting/SE2JUCE_Processor.cpp
-        ${SE2JUCE_FOLDER}/SE_DSP_CORE/modules/se_sdk3_hosting/SE2JUCE_Controller.cpp
+
+        ${se2juce_srcs}
+
         # EXTRA-MODULES?
         # please also add in entry for each module in Source/ExtraModules.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/../modules_3rdparty/ADSR4/Adsr4.cpp
