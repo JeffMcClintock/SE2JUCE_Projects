@@ -101,8 +101,6 @@ set(se2juce_srcs
     ${SE_HOSTING_FOLDER}/SE2JUCE_ParameterAttachment.h
     ${SE_HOSTING_FOLDER}/ProcessorStateManager.h
     ${SE_HOSTING_FOLDER}/ProcessorStateManager.cpp
-    ${SE_HOSTING_FOLDER}/SubPresetManager.h
-    ${SE_HOSTING_FOLDER}/SubPresetManager.cpp
 )
 
 target_sources(${TARGET_NAME}
