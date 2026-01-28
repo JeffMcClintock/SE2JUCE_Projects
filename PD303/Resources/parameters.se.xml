@@ -1,0 +1,102 @@
+<?xml version="1.0" ?>
+<Controller>
+  <PatchManager>
+    <Parameters>
+      <Parameter Handle="938974747" HostControl="49" Private="1" Name="" ValueType="10">
+        <patch-list>
+          <s></s>
+        </patch-list>
+      </Parameter>
+      <Parameter Handle="1621701472" Module="15409" MIDI="100663296" HostControl="15" ignoreProgramChange="1" Private="1" persistant="0" Name="Bender" RangeMinimum="-1" RangeMaximum="1" />
+      <Parameter Handle="2026708959" Module="15409" MIDI="33554496" HostControl="16" ignoreProgramChange="1" Private="1" persistant="0" Name="HoldPedal" />
+      <Parameter Handle="622988279" Module="15409" HostControl="21" ignoreProgramChange="1" Private="1" Name="Polyphony" ValueType="8" RangeMinimum="1" RangeMaximum="128">
+        <patch-list>
+          <s>6</s>
+        </patch-list>
+      </Parameter>
+      <Parameter Handle="1041141624" HostControl="4" ignoreProgramChange="1" Private="1" Name="Program Name" ValueType="1">
+        <patch-list>
+          <s>CZ Bass</s>
+        </patch-list>
+      </Parameter>
+      <Parameter Handle="1053706668" Module="15409" HostControl="22" ignoreProgramChange="1" Private="1" Name="ReserveVoices" ValueType="8" RangeMaximum="128">
+        <patch-list>
+          <s>3</s>
+        </patch-list>
+      </Parameter>
+      <Parameter Handle="0" isPolyphonic="1" Module="15409" VoiceCount="128" MIDI="419430400" HostControl="12" ignoreProgramChange="1" Private="1" persistant="0" Name="Voice/Active" />
+      <Parameter Handle="1466582837" isPolyphonic="1" Module="15409" VoiceCount="128" MIDI="385875968" HostControl="10" ignoreProgramChange="1" Private="1" persistant="0" Name="Voice/Aftertouch" />
+      <Parameter Handle="1920901222" isPolyphonic="1" isPolyphonicGate="1" Module="15409" VoiceCount="128" MIDI="335544320" HostControl="6" ignoreProgramChange="1" Private="1" persistant="0" Name="Voice/Gate" />
+      <Parameter Handle="874265454" isPolyphonic="1" Module="15409" VoiceCount="128" MIDI="318767104" HostControl="7" ignoreProgramChange="1" Private="1" persistant="0" Name="Voice/Pitch" />
+      <Parameter Handle="1077854468" isPolyphonic="1" Module="15409" VoiceCount="128" MIDI="437518336" HostControl="38" ignoreProgramChange="1" Private="1" persistant="0" Name="Voice/PortamentoEnable" />
+      <Parameter Handle="1921460643" isPolyphonic="1" Module="15409" VoiceCount="128" MIDI="402653184" HostControl="5" ignoreProgramChange="1" Private="1" persistant="0" Name="Voice/Trigger" />
+      <Parameter Handle="1007984323" isPolyphonic="1" Module="15409" VoiceCount="128" MIDI="352321536" HostControl="8" ignoreProgramChange="1" Private="1" persistant="0" Name="Voice/VelocityKeyOn" />
+      <Parameter Handle="324391833" Module="15409" HostControl="14" ignoreProgramChange="1" Private="1" Name="VoiceAllocationMode" ValueType="8" RangeMinimum="1" RangeMaximum="128">
+        <patch-list>
+          <s>768</s>
+        </patch-list>
+      </Parameter>
+      <Parameter Handle="1" Module="18625" Index="0" ignoreProgramChange="1" Name="Amnt - Key Track">
+        <patch-list>
+          <s>9.52773</s>
+        </patch-list>
+      </Parameter>
+      <Parameter Handle="2" Module="9574" Index="1" Name="Amnt -Delay">
+        <patch-list>
+          <s>10</s>
+        </patch-list>
+      </Parameter>
+      <Parameter Handle="13" Module="14011" Index="2" Name="Cuttoff">
+        <patch-list>
+          <s>3.56711</s>
+        </patch-list>
+      </Parameter>
+      <Parameter Handle="11" Module="15097" Index="3" Name="Decay">
+        <patch-list>
+          <s>5.53257</s>
+        </patch-list>
+      </Parameter>
+      <Parameter Handle="3" Module="27049" Index="4" Name="Delay" RangeMinimum="-5" RangeMaximum="5">
+        <patch-list>
+          <s>5</s>
+        </patch-list>
+      </Parameter>
+      <Parameter Handle="12" Module="11484" Index="5" Name="Env Mod">
+        <patch-list>
+          <s>3.20933</s>
+        </patch-list>
+      </Parameter>
+      <Parameter Handle="7" Module="3241" Index="6" Name="Feedbk">
+        <patch-list>
+          <s>3.8832</s>
+        </patch-list>
+      </Parameter>
+      <Parameter Handle="4" Module="1594" Index="7" ignoreProgramChange="1" Name="Key Follow" RangeMinimum="-10">
+        <patch-list>
+          <s>-5.6286</s>
+        </patch-list>
+      </Parameter>
+      <Parameter Handle="5" Module="1534" Index="8" ignoreProgramChange="1" Name="Portamento">
+        <patch-list>
+          <s>3.14591</s>
+        </patch-list>
+      </Parameter>
+      <Parameter Handle="6" Module="330" Index="9" ignoreProgramChange="1" Name="Retrigger" ValueType="8" MetaData="On=1,Off=0">
+        <patch-list>
+          <s>1</s>
+        </patch-list>
+      </Parameter>
+      <Parameter Handle="10" Module="4760" Index="10" Name="Wave" ValueType="8" MetaData="Saw,Square,Pulse,Dbl Sine,Saw-Pulse,Reso1,Reso2,Reso3">
+        <patch-list>
+          <s>2</s>
+        </patch-list>
+      </Parameter>
+      <Parameter Handle="9" Module="19337" Index="11" Name="Wave2" ValueType="8" MetaData="None=-1,Saw,Square,Pulse,Dbl Sine,Saw-Pulse,Reso1,Reso2,Reso3">
+        <patch-list>
+          <s>0</s>
+        </patch-list>
+      </Parameter>
+    </Parameters>
+  </PatchManager>
+  <ChildControllers />
+</Controller>

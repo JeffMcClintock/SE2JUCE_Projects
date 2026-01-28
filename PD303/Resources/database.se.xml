@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document>
+    <PluginList>
+        <Plugin id="SE Blob2ToBlob" name="Blob2 To Blob" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="Blob2 Val" datatype="blob2"/>
+                <Pin name="Blob Val" datatype="blob" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE BlobToBlob2" name="Blob To Blob2" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="Blob Val" datatype="blob"/>
+                <Pin name="Blob2 Val" datatype="blob2" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE BoolToFloat" name="Bool To Float" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="Bool Val" datatype="bool"/>
+                <Pin name="Float Val" datatype="float" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE BoolToInt" name="Bool To Int" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="Bool Val" datatype="bool"/>
+                <Pin name="Int Val" datatype="int" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE BoolToText" name="Bool To Text" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="Bool Val" datatype="bool"/>
+                <Pin name="Text Val" datatype="string" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE BoolToVolts" name="Bool to Volts" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="In" datatype="bool"/>
+                <Pin name="Out" datatype="float" rate="audio" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE Float64ToFloat" name="Double To Float" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="Double Val" datatype="double"/>
+                <Pin name="Float Val" datatype="float" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE Float64ToFloatGui" name="Double To Float" imbeddedFilename="Converters.sem">
+            <GUI>
+                <Pin name="Double Val" datatype="double"/>
+                <Pin name="Float Val" datatype="float" direction="out"/>
+            </GUI>
+        </Plugin>
+        <Plugin id="SE FloatToBool" name="Float To Bool" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="Float Val" datatype="float"/>
+                <Pin name="Bool Val" datatype="bool" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE FloatToFloat64" name="Float To Double" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="Float Val" datatype="float"/>
+                <Pin name="Double Val" datatype="double" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE FloatToFloat64Gui" name="Float To Double" imbeddedFilename="Converters.sem">
+            <GUI>
+                <Pin name="Float Val" datatype="float"/>
+                <Pin name="Double Val" datatype="double" direction="out"/>
+            </GUI>
+        </Plugin>
+        <Plugin id="SE FloatToInt" name="Float To Int" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="Float Val" datatype="float"/>
+                <Pin name="Int Val" datatype="int" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE FloatToText" name="Float To Text" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="Float Val" datatype="float"/>
+                <Pin name="Text Val" datatype="string" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE Int64ToInt" name="Int64 To Int" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="Int64 Val" datatype="int64"/>
+                <Pin name="Int Val" datatype="int" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE Int64ToIntGui" name="Int64 To Int" imbeddedFilename="Converters.sem">
+            <GUI>
+                <Pin name="Int64 Val" datatype="int64"/>
+                <Pin name="Int Val" datatype="int" direction="out"/>
+            </GUI>
+        </Plugin>
+        <Plugin id="SE IntToBool" name="Int to Bool" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="Int Val" datatype="int"/>
+                <Pin name="Bool Val" datatype="bool" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE IntToFloat" name="Int To Float" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="Int Val" datatype="int"/>
+                <Pin name="Float Val" datatype="float" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE IntToInt64" name="Int To Int64" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="Int Val" datatype="int"/>
+                <Pin name="Int64 Val" datatype="int64" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE IntToInt64Gui" name="Int To Int64" imbeddedFilename="Converters.sem">
+            <GUI>
+                <Pin name="Int Val" datatype="int"/>
+                <Pin name="Int64 Val" datatype="int64" direction="out"/>
+            </GUI>
+        </Plugin>
+        <Plugin id="SE IntToText" name="Int To Text" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="Int Val" datatype="int"/>
+                <Pin name="Text Val" datatype="string" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE IntToVolts" name="Int to Volts" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="In" datatype="int"/>
+                <Pin name="Out" datatype="float" rate="audio" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE List Entry" name="List Entry" imbeddedFilename="ControlsXp.sem">
+            <Parameters>
+                <Parameter id="0" datatype="enum" name="s1"/>
+            </Parameters>
+            <Audio>
+                <Pin name="Value In" datatype="int" private="true" parameterId="0"/>
+                <Pin name="Value Out" datatype="enum" direction="out" autoConfigureParameter="true"/>
+            </Audio>
+            <GUI graphicsApi="GmpiGui">
+                <Pin id="10" name="Value In" datatype="int" private="true" parameterId="0"/>
+                <Pin name="Hint" datatype="string" private="true"/>
+                <Pin name="EnumList" datatype="string" private="true" parameterId="0" parameterField="7"/>
+                <Pin name="Appearance" datatype="enum" isMinimised="true" metadata="Dropdown, LED Stack, LED Stack (labelled), Selector, Button Stack, Rot Switch=5,Rot Switch (no labels), Up/Down Select"/>
+                <Pin name="Title" datatype="string" isMinimised="true"/>
+                <Pin name="Menu Items" datatype="string" private="true" parameterId="0" parameterField="3"/>
+                <Pin name="Menu Selection" datatype="int" private="true" parameterId="0" parameterField="4"/>
+            </GUI>
+        </Plugin>
+        <Plugin id="SE ListToInt" name="List To Int" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="List Val" datatype="enum"/>
+                <Pin name="Int Val" datatype="int" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE Plain Image" name="Plain Image" imbeddedFilename="SubControlsXp.sem">
+            <GUI graphicsApi="GmpiGui">
+                <Pin name="Filename" datatype="string" default="background" isFilename="true" metadata="bmp"/>
+                <Pin name="Display" datatype="enum" isMinimised="true" metadata="Fixed Size, Tiled, Stretch"/>
+            </GUI>
+        </Plugin>
+        <Plugin id="SE Slider" name="Slider" imbeddedFilename="ControlsXp.sem">
+            <Parameters>
+                <Parameter id="0" datatype="float" name="s1"/>
+            </Parameters>
+            <Audio>
+                <Pin name="S0" datatype="float" private="true" parameterId="0"/>
+                <Pin id="6" name="Signal Out" datatype="float" rate="audio" direction="out" autoConfigureParameter="true"/>
+            </Audio>
+            <GUI graphicsApi="GmpiGui">
+                <Pin id="13" name="Value In" datatype="float" private="true" parameterId="0"/>
+                <Pin name="Hint" datatype="string" private="true"/>
+                <Pin name="Appearance" datatype="enum" isMinimised="true" metadata="Slider,H-Slider=2,Knob,Button, Button (toggle), Knob (small)=7, Button(small), Button (small toggle)"/>
+                <Pin name="Title" datatype="string" isMinimised="true"/>
+                <Pin name="Normalized" datatype="float" private="true" parameterId="0" parameterField="15"/>
+                <Pin name="Menu Items" datatype="string" private="true" parameterId="0" parameterField="3"/>
+                <Pin name="Menu Selection" datatype="int" private="true" parameterId="0" parameterField="4"/>
+                <Pin name="Mouse Down" datatype="bool" private="true" parameterId="0" parameterField="14"/>
+                <Pin name="RangeLo" datatype="float" private="true" parameterId="0" parameterField="5"/>
+                <Pin name="RangeHi" datatype="float" private="true" parameterId="0" parameterField="6"/>
+                <Pin name="Show Readout" datatype="bool" default="1" isMinimised="true"/>
+            </GUI>
+        </Plugin>
+        <Plugin id="SE Text8ToText" name="Text8 To Text" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="Text Val" datatype="string_utf8"/>
+                <Pin name="Text Val" datatype="string" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE TextToBool" name="Text To Bool" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="Text Val" datatype="string"/>
+                <Pin name="Bool Val" datatype="bool" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE TextToFloat" name="Text To Float" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="Text Val" datatype="string"/>
+                <Pin name="Float Val" datatype="float" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE TextToInt" name="Text To Int" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="Text Val" datatype="string"/>
+                <Pin name="Int Val" datatype="int" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE TextToText8" name="Text To Text8" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="Text Val" datatype="string"/>
+                <Pin name="Text Val" datatype="string_utf8" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE VoltsToBool" name="Volts to Bool" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="In" datatype="float" rate="audio"/>
+                <Pin name="Out" datatype="bool" direction="out"/>
+            </Audio>
+        </Plugin>
+        <Plugin id="SE VoltsToInt" name="Volts to Int" imbeddedFilename="Converters.sem">
+            <Audio>
+                <Pin name="In" datatype="float" rate="audio"/>
+                <Pin name="Out" datatype="int" direction="out"/>
+            </Audio>
+        </Plugin>
+    </PluginList>
+</Document>

@@ -1,0 +1,2 @@
+type animated
+frame_size 18, 18

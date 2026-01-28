@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<Factory SEVersion="1.5 B659">
+  <Vendor Email="no-one@nobody.com" Url="http://www.steinberg.com" Name="Jeff" />
+  <Plugins>
+    <Plugin subCategories="Instrument|Synth" macCategory="aumu" ProcessorId="{EC02DBD1-17E9-4B2E-A67E-CADC07F0E698}" ControllerId="{D98AF47C-714E-4E82-BDE8-F1E86529E7D5}" Name="PD303" ManufacturerId="Synt" PluginID="1885614896" Version="1.0.0.0" outputsAsStereoPairs="1" numMidiIn="1" outputNames="Left,Right" outputCount="2" />
+  </Plugins>
+</Factory>

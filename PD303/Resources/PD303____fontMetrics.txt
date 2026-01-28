@@ -1,0 +1,1 @@
+module_title|15 panel_group|16 control_label|16 control_edit|16 switch_label|12 selector_text|16 tty|12 properties_heading|16 plug|12 normal|13 heading 1|33 heading 2|21 heading 3|16 user 1|16 user 2|13 user 3|15 

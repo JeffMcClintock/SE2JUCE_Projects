@@ -1,0 +1,423 @@
+
+{
+	"gui" : 
+	{
+		"connections" : [],
+		"handle" : 15409,
+		"height" : 155,
+		"modules" : 
+		[
+			
+			{
+				"Pins" : 
+				[
+					
+					{
+						"Id" : 13,
+						"parameterId" : 0
+					},
+					
+					{
+						"Id" : 15,
+						"default" : "7"
+					},
+					
+					{
+						"Id" : 14,
+						"default" : ""
+					},
+					
+					{
+						"Id" : 23,
+						"default" : "0"
+					},
+					
+					{
+						"Id" : 16,
+						"default" : "Amnt - Key Track"
+					}
+				],
+				"handle" : 18625,
+				"pb" : 240,
+				"pl" : 368,
+				"pr" : 483,
+				"pt" : 208,
+				"type" : "SE Slider"
+			},
+			
+			{
+				"Pins" : 
+				[
+					
+					{
+						"Id" : 13,
+						"parameterId" : 0
+					},
+					
+					{
+						"Id" : 15,
+						"default" : "7"
+					},
+					
+					{
+						"Id" : 14,
+						"default" : ""
+					},
+					
+					{
+						"Id" : 23,
+						"default" : "0"
+					}
+				],
+				"handle" : 9574,
+				"pb" : 95,
+				"pl" : 357,
+				"pr" : 373,
+				"pt" : 63,
+				"type" : "SE Slider"
+			},
+			
+			{
+				"Pins" : 
+				[
+					
+					{
+						"Id" : 13,
+						"parameterId" : 0
+					},
+					
+					{
+						"Id" : 15,
+						"default" : "7"
+					},
+					
+					{
+						"Id" : 14,
+						"default" : ""
+					},
+					
+					{
+						"Id" : 23,
+						"default" : "0"
+					}
+				],
+				"handle" : 27049,
+				"pb" : 70,
+				"pl" : 356,
+				"pr" : 372,
+				"pt" : 38,
+				"type" : "SE Slider"
+			},
+			
+			{
+				"Pins" : 
+				[
+					
+					{
+						"Id" : 13,
+						"parameterId" : 0
+					},
+					
+					{
+						"Id" : 15,
+						"default" : "7"
+					},
+					
+					{
+						"Id" : 14,
+						"default" : ""
+					},
+					
+					{
+						"Id" : 16,
+						"default" : "Key Follow"
+					}
+				],
+				"handle" : 1594,
+				"pb" : 260,
+				"pl" : 432,
+				"pr" : 506,
+				"pt" : 216,
+				"type" : "SE Slider"
+			},
+			
+			{
+				"Pins" : 
+				[
+					
+					{
+						"Id" : 13,
+						"parameterId" : 0
+					},
+					
+					{
+						"Id" : 15,
+						"default" : "7"
+					},
+					
+					{
+						"Id" : 14,
+						"default" : ""
+					},
+					
+					{
+						"Id" : 23,
+						"default" : "0"
+					},
+					
+					{
+						"Id" : 16,
+						"default" : "Portamento"
+					}
+				],
+				"handle" : 1534,
+				"pb" : 192,
+				"pl" : 528,
+				"pr" : 609,
+				"pt" : 160,
+				"type" : "SE Slider"
+			},
+			
+			{
+				"Pins" : 
+				[
+					
+					{
+						"Id" : 10,
+						"parameterId" : 0
+					},
+					
+					{
+						"Id" : 13,
+						"default" : "2"
+					},
+					
+					{
+						"Id" : 14,
+						"default" : "Retrigger"
+					},
+					
+					{
+						"Id" : 11,
+						"default" : ""
+					}
+				],
+				"handle" : 330,
+				"pb" : 408,
+				"pl" : 368,
+				"pr" : 444,
+				"pt" : 352,
+				"type" : "SE List Entry"
+			},
+			
+			{
+				"Pins" : 
+				[
+					
+					{
+						"Id" : 13,
+						"parameterId" : 0
+					},
+					
+					{
+						"Id" : 15,
+						"default" : "7"
+					},
+					
+					{
+						"Id" : 14,
+						"default" : ""
+					},
+					
+					{
+						"Id" : 23,
+						"default" : "0"
+					}
+				],
+				"handle" : 3241,
+				"pb" : 117,
+				"pl" : 356,
+				"pr" : 372,
+				"pt" : 85,
+				"type" : "SE Slider"
+			},
+			
+			{
+				"Pins" : 
+				[
+					
+					{
+						"Id" : 10,
+						"parameterId" : 0
+					},
+					
+					{
+						"Id" : 13,
+						"default" : "3"
+					},
+					
+					{
+						"Id" : 11,
+						"default" : ""
+					}
+				],
+				"handle" : 19337,
+				"pb" : 114,
+				"pl" : 1,
+				"pr" : 102,
+				"pt" : 66,
+				"type" : "SE List Entry"
+			},
+			
+			{
+				"Pins" : 
+				[
+					
+					{
+						"Id" : 10,
+						"parameterId" : 0
+					},
+					
+					{
+						"Id" : 13,
+						"default" : "3"
+					},
+					
+					{
+						"Id" : 11,
+						"default" : ""
+					}
+				],
+				"handle" : 4760,
+				"pb" : 81,
+				"pl" : 1,
+				"pr" : 102,
+				"pt" : 33,
+				"type" : "SE List Entry"
+			},
+			
+			{
+				"Pins" : 
+				[
+					
+					{
+						"Id" : 13,
+						"parameterId" : 0
+					},
+					
+					{
+						"Id" : 15,
+						"default" : "3"
+					},
+					
+					{
+						"Id" : 14,
+						"default" : ""
+					},
+					
+					{
+						"Id" : 23,
+						"default" : "0"
+					}
+				],
+				"handle" : 15097,
+				"pb" : 120,
+				"pl" : 232,
+				"pr" : 312,
+				"pt" : 24,
+				"type" : "SE Slider"
+			},
+			
+			{
+				"Pins" : 
+				[
+					
+					{
+						"Id" : 13,
+						"parameterId" : 0
+					},
+					
+					{
+						"Id" : 15,
+						"default" : "3"
+					},
+					
+					{
+						"Id" : 14,
+						"default" : ""
+					},
+					
+					{
+						"Id" : 23,
+						"default" : "0"
+					}
+				],
+				"handle" : 11484,
+				"pb" : 120,
+				"pl" : 168,
+				"pr" : 248,
+				"pt" : 24,
+				"type" : "SE Slider"
+			},
+			
+			{
+				"Pins" : 
+				[
+					
+					{
+						"Id" : 13,
+						"parameterId" : 0
+					},
+					
+					{
+						"Id" : 15,
+						"default" : "3"
+					},
+					
+					{
+						"Id" : 14,
+						"default" : ""
+					},
+					
+					{
+						"Id" : 23,
+						"default" : "0"
+					}
+				],
+				"handle" : 14011,
+				"pb" : 120,
+				"pl" : 104,
+				"pr" : 184,
+				"pt" : 24,
+				"type" : "SE Slider"
+			},
+			
+			{
+				"Pins" : 
+				[
+					
+					{
+						"Id" : 0,
+						"default" : "background"
+					},
+					
+					{
+						"Id" : 1,
+						"default" : "1"
+					}
+				],
+				"handle" : 1535025010,
+				"ignoremouse" : "true",
+				"pb" : 155,
+				"pl" : 0,
+				"pr" : 382,
+				"pt" : 0,
+				"type" : "SE Plain Image"
+			}
+		],
+		"skin" : "PD303",
+		"vst_about_text" : "By Jeff McCLintock\r\nwww.synthedit.com\r\nShareware,\r\nIf you like it $10.\r\n15 Harbour View Rd\r\nRD6 Warkworth\r\nNew Zealand",
+		"vst_nag_user" : false,
+		"width" : 382
+	}
+}
