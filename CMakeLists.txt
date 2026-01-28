@@ -44,7 +44,7 @@ set(JUCE_FOLDER ${juce_SOURCE_DIR})
 
 
 # SYNTHEDITLIB SDK
-if("${SYNTHEDITLIB_FOLDER_OVERRIDE}" STREQUAL "")
+if("${SE2JUCE_FOLDER}" STREQUAL "")
 message(STATUS "Fetching SE2JUCE from github")
 FetchContent_Declare(
   syntheditlib
@@ -56,7 +56,6 @@ FetchContent_MakeAvailable(syntheditlib)
 set(SE2JUCE_FOLDER ${syntheditlib_SOURCE_DIR})
 else()
 message(STATUS "Using local SE2JUCE folder")
-set(SE2JUCE_FOLDER ${SYNTHEDITLIB_FOLDER_OVERRIDE})
 endif()
 
 set(VST3_SDK ${JUCE_FOLDER}/modules/juce_audio_processors/format_types/VST3_SDK)
